@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello</h2>
+    <script>
+        const userProfile = {
+            name: "Abish",
+            birthYear: 2007,
+            isDeveloper: true,
+            hobbies: ["Code", "Music", "Games"]
+        }
+        console.log("Your age is: " + String(2026-userProfile.birthYear));
+        
+        let countHobby = 0;
+
+        for(hobby in userProfile.hobbies){
+            countHobby+=1;
+        }
+        console.log("Total count of hobbies is: "+ String(countHobby) )
+        
+    </script>
+
+
+</body>
+</html>

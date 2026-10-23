@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Event listener</h3>
+
+     <form>
+        <label for="Username">Username</label>
+        <input type="text" id="Username">
+        <br><br>
+        
+        <label for="birthYear">Birth Year</label>
+        <input type="number" id="birthYear">
+        <br><br>
+        
+        <button type="submit">Create</button>
+        <button class="update" type="button">Update</button>
+        
+    </form>
+    <script>
+        
+        const userProfile = {
+            name: "Abish",
+            birthYear: 2007,
+            isDeveloper: true,
+            hobbies: ["Code", "Music", "Games"]
+        }
+        
+        console.log(userProfile)
+
+        const button = document.querySelector('.update');
+        
+        button.addEventListener('click', function() {
+
+            const username = document.querySelector('#Username').value;
+            const birthYear = document.querySelector('#birthYear').value;
+
+            userProfile.name = username;
+            userProfile.birthYear = Number(birthYear);
+    
+            console.log(userProfile)
+        }); 
+    </script>
+</body>
+</html>

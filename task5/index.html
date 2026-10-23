@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hobbies</h3>
+    <ul id="hobbies">
+        <li>Code</li>
+        <li>Music</li>
+        <li>Games</li>
+    </ul>
+    <form>
+        <label for="newHobby">Add new hobby:</label>
+        <input type="text" id="newHobby">
+        <button id="add" type="button">Add</button>
+    </form>
+    <script>
+        const list = document.querySelector("#hobbies");
+        const button = document.querySelector("#add");
+
+        button.addEventListener("click", function(){
+            let newHobby = document.createElement('li');
+            let addedhobby= document.querySelector("#newHobby").value;
+            newHobby.textContent = addedhobby;
+            list.appendChild(newHobby);
+        });
+    </script>
+</body>
+</html>
